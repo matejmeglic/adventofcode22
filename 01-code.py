@@ -1,4 +1,5 @@
 # find the elf with the most calories from the list
+# https://adventofcode.com/2022/day/1
 
 with open('01-list.txt', 'r', encoding="utf-8") as calories_list:
     caloriesCounter = {}
