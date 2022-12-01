@@ -1,9 +1,12 @@
-with open('01-list.txt', 'r', encoding="utf-8") as topo_file:
+# find the elf with the most calories from the list
+
+with open('01-list.txt', 'r', encoding="utf-8") as calories_list:
     caloriesCounter = {}
     elfCalories = 0
     iterationCounter = 1
 
-    for line in topo_file:
+    # calculate calories per elf
+    for line in calories_list:
         if line != "\n":
             elfCalories += int(line)
         else:
@@ -14,5 +17,6 @@ with open('01-list.txt', 'r', encoding="utf-8") as topo_file:
     if elfCalories != 0:
         caloriesCounter[iterationCounter] = elfCalories
 
+    print(caloriesCounter)
     print(
         f'The most loaded elf is elf number {max(caloriesCounter, key=caloriesCounter.get)} with {caloriesCounter[max(caloriesCounter, key=caloriesCounter.get)]} calories.')
