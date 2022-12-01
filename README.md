@@ -1,1 +1,1 @@
-# adventofcode22
+Let's see how long do I last in this AoC2022.
