@@ -21,3 +21,20 @@ with open('01-list.txt', 'r', encoding="utf-8") as calories_list:
     print(caloriesCounter)
     print(
         f'The most loaded elf is elf number {max(caloriesCounter, key=caloriesCounter.get)} with {caloriesCounter[max(caloriesCounter, key=caloriesCounter.get)]} calories.')
+
+# get top3 calories
+    top3elves = {}
+    elfCalories = 0
+    iterationCounter = 0
+
+    while iterationCounter < 3:
+        top3elves[max(caloriesCounter, key=caloriesCounter.get)] = caloriesCounter[max(
+            caloriesCounter, key=caloriesCounter.get)]
+        elfCalories += caloriesCounter[max(caloriesCounter,
+                                           key=caloriesCounter.get)]
+        # splitting could be done better, not mutable
+        caloriesCounter[max(caloriesCounter, key=caloriesCounter.get)] = 0
+        iterationCounter += 1
+
+    print(top3elves)
+    print(elfCalories)
